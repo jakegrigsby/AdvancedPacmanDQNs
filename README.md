@@ -8,4 +8,12 @@ To run agents yourself, you'll need a [keras-rl](https://github.com/keras-rl/ker
 ###### 2. Download demo observations
 If you want to run the CNN visualization scripts, you'll need to download the demo observations (the files are large and annoying to get onto GitHub). You can get them from: [here](https://drive.google.com/open?id=1wfxv1jrzHuguXYQls1jy69bRwKpOkqiY) and [here](https://drive.google.com/open?id=1KYUnZhBVthXvdDCX_2ZjEY3hxwPG1k3O). Place them in the analysis folder.
 
+###### Run Trained Agents
+Play trained agents using the commands:
+'''
+python noisyNstepPDD.py --mode test
+python pdd.py --mode test
+python vanilla.py --mode test
+'''
+
 Dependencies include: keras, keras-rl, numpy, PIL, cv2, matplotlib, gym.

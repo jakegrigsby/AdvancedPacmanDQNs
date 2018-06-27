@@ -93,7 +93,7 @@ if args.mode == 'train':
 
 
 elif args.mode == 'test':
-    weights_filename = folder_path + 'final_noisynet_nstep_pdd_dqn_{}_weights.h5f'.format(args.env_name)
+    weights_filename = folder_path + 'final_noisynet_nstep_pdd_dqn_MsPacmanDeterministic-v4_weights_40000000.h5f'
     if args.weights:
         weights_filename = args.weights
     dqn.load_weights(weights_filename)

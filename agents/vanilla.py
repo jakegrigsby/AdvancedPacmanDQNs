@@ -86,7 +86,7 @@ if args.mode == 'train':
     dqn.fit(env, callbacks=callbacks, nb_steps=10000000, verbose=0, nb_max_episode_steps=20000)
 
 elif args.mode == 'test':
-    weights_filename = folder_path + 'dqn_{}_weights.h5f'.format(args.env_name)
+    weights_filename = folder_path + 'dqn_MsPacmanDeterministic-v4_weights_10000000.h5f'
     if args.weights:
         weights_filename = args.weights
     dqn.load_weights(weights_filename)
