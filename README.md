@@ -10,10 +10,10 @@ If you want to run the CNN visualization scripts, you'll need to download the de
 
 ###### Run Trained Agents
 Play trained agents using the commands:
-'''
+```
 python noisyNstepPDD.py --mode test
 python pdd.py --mode test
 python vanilla.py --mode test
-'''
+```
 
 Dependencies include: keras, keras-rl, numpy, PIL, cv2, matplotlib, gym.
