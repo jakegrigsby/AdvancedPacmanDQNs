@@ -1,5 +1,5 @@
 # AdvancedPacmanDQNs
-GitHub repo containing the agents, analysis scripts, and figures from [Advanced DQNs: Playing Pac-man with Deep Reinforcement Learning](www.link.com)
+GitHub repo containing the agents, analysis scripts, and figures from [Advanced DQNs: Playing Pac-man with Deep Reinforcement Learning](https://towardsdatascience.com/advanced-dqns-playing-pac-man-with-deep-reinforcement-learning-3ffbd99e0814)
 
 ##### Instructions
 ###### 1. Download keras-rl
