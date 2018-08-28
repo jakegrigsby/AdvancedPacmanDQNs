@@ -74,7 +74,7 @@ policy = GreedyQPolicy()
 
 #N-step loss with n of 3
 dqn = DQNAgent(model=model, nb_actions=nb_actions, policy=policy, memory=memory,
-               processor=processor, enable_double_dqn=True, enable_dueling_network=True, nb_steps_warmup=3000, gamma=.99, target_model_update=10000,
+               processor=processor, enable_double_dqn=True, enable_dueling_network=True, nb_steps_warmup=50000, gamma=.99, target_model_update=10000,
                train_interval=4, delta_clip=1., n_step=3, custom_model_objects={"NoisyNetDense":NoisyNetDense})
 
 #Prioritized Memories typically use lower learning rates
