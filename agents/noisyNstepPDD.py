@@ -74,8 +74,8 @@ policy = GreedyQPolicy()
 
 #N-step loss with n of 3
 dqn = DQNAgent(model=model, nb_actions=nb_actions, policy=policy, memory=memory,
-               processor=processor, enable_double_dqn=True, enable_dueling_network=True, nb_steps_warmup=50000, gamma=.99, target_model_update=10000,
-               train_interval=4, delta_clip=1.)
+               processor=processor, enable_double_dqn=True, enable_dueling_network=True, nb_steps_warmup=3000, gamma=.99, target_model_update=10000,
+               train_interval=4, delta_clip=1., n_step=3, custom_model_objects={"NoisyNetDense":NoisyNetDense})
 
 #Prioritized Memories typically use lower learning rates
 dqn.compile(Adam(lr=.00025/4), metrics=['mae'])
@@ -83,7 +83,6 @@ dqn.compile(Adam(lr=.00025/4), metrics=['mae'])
 folder_path = '../model_saves/NoisyNstepPDD/'
 
 if args.mode == 'train':
-    dqn.load_weights(folder_path + 'noisynet_pdd_dqn_MsPacmanDeterministic-v4_weights_10000000.h5f')
     weights_filename = folder_path + 'final_noisynet_nstep_pdd_dqn_{}_weights.h5f'.format(args.env_name)
     checkpoint_weights_filename = folder_path + 'final_noisynet_nstep_pdd_dqn_' + args.env_name + '_weights_{step}.h5f'
     log_filename = folder_path + 'final_noisynet_nstep_pdd_dqn_' + args.env_name + '_REWARD_DATA.txt'
